@@ -1,17 +1,12 @@
 pipeline {
-    agent any
+    agent {
+        label 'test1'
+    }
     stages {
-        stage('Checkout') {
+        stage('Hello') {
             steps {
-                git url: 'https://github.com/cc901109/MedicalWeb.git',
-                    credentialsId: 'github'
-            }
-        }
-        stage('Build') {
-            steps {
-                echo 'Building...'
+                echo 'Hello World'
             }
         }
     }
 }
-
