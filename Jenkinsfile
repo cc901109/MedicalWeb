@@ -8,5 +8,12 @@ pipeline {
                 echo 'Hello World'
             }
         }
+	stage('test1') {
+            steps {
+                sh '''pwd
+		  ls -al '''
+            }
+        }
+
     }
 }
