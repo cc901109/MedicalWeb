@@ -5,12 +5,14 @@ pipeline{
   stages{
     stage('test1'){
       steps{
-        echo "stage1"
+        sh'''
+        echo 00'''
       }
     }
     stage('test2'){
       steps{
-        echo '"stage2"
+        sh'''
+        echo 22'''
       }
     }
     
