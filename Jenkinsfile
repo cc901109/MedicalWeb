@@ -20,7 +20,7 @@ pipeline{
       steps{
         sh'''pwd
         ls -al
-        echo This is Upload Stage > upload.txt'''
+        echo This is Upload Stage'''
       }
     }
 
