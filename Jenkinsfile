@@ -1,6 +1,6 @@
 pipeline{
-  agent{
-    label 'test_0828'
+  agent {
+  label 'test_0828_001'
   }
   stages{
     stage('test1'){
