@@ -26,8 +26,7 @@ pipeline{
 
     stage('WsClean'){
       steps{
-        sh'''
-        cleanWs(deleteDirs: true)'''
+        cleanWs(deleteDirs: true)
       }
     }
   }
