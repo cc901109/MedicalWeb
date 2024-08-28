@@ -20,8 +20,7 @@ pipeline{
       steps{
         sh'''pwd
         ls -al
-        echo This is Upload Stage > upload.txt
-        curl -u "carol:carol240819!" -T upload.txt https://fidirve-hc-cns.fiinet.com/remote.php/dav/files/carol/carol_use_only_carol_create/upload.txt'''
+        echo This is Upload Stage > upload.txt'''
       }
     }
 
