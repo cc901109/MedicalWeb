@@ -7,8 +7,8 @@ pipeline{
     
     stage('Git'){
       steps{
-        emailext body: 'Build process is completing', subject: 'Build Complete', to: 'tzuyu1109@gmail.com'
-        checkout scmGit(branches: [[name: '*/$BRANCH_NAME']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/cc901109/MedicalWeb']])
+        emailext attachLog: true, body: 'test', recipientProviders: [buildUser(), developers()], subject: 'email', to: 'tzuyu1109@gmail.com'
+        
         sh'''pwd
         ls -al
         id
