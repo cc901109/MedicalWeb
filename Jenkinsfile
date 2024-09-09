@@ -7,10 +7,10 @@ pipeline{
     stage('Git'){
       steps{
         
-        
+        emailext body: 'aaa', subject: 'aaa', to: 'tzuyu1109'
         
         sh'''
-        emailext body: 'aaa', subject: 'aaa', to: 'tzuyu1109'
+        
         pwd
         ls -al
         id
