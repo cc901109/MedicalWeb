@@ -10,7 +10,7 @@ pipeline{
         
         
         sh'''
-        emailext body: 'aaa', subject: 'aaa', to: 'tttt1109@yahoo.com.tw'
+        emailext body: 'aaa', subject: 'aaa', to: 'tzuyu1109'
         pwd
         ls -al
         id
