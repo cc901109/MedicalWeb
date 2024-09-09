@@ -10,7 +10,6 @@ pipeline{
         emailext body: 'aaa', subject: 'aaa', to: 'tzuyu1109@gmail.com'
         
         sh'''pwd
-        echo "Build process is completing" | mail -s "Build Complete" tzuyu@gmail.com
         ls -al
         id
         echo git'''
