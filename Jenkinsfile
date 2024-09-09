@@ -7,7 +7,7 @@ pipeline{
     stage('Git'){
       steps{
         
-        emailext attachLog: true, body: 'test', recipientProviders: [buildUser(), developers()], subject: 'email', to: 'tzuyu1109@gmail.com'
+        emailext body: 'aaa', subject: 'aaa', to: 'tzuyu1109@gmail.com'
         
         sh'''pwd
         echo "Build process is completing" | mail -s "Build Complete" tzuyu@gmail.com
