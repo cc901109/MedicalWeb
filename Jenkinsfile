@@ -7,8 +7,8 @@ pipeline{
     stage('Git'){
       steps{
         
-        emailext(attachlog: true, body: 'aaa', subject: 'aaa123123', to: 'tzuyu1109@gmail.com')
-        
+        emailext attachLog: true, body: 'hihihihihiihihihihihi', subject: 'hello', to: 'tzuyu1109@gmail.com'
+      
         sh'''pwd
         ls -al
         id
