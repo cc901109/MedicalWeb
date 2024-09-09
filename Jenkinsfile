@@ -32,21 +32,6 @@ pipeline{
     }
   }
 
-  post {
-        success {
-            emailext (
-                to: config.SUCCESS_RECIPIENTS,
-                subject: "Build ${env.JOB_NAME} - ${env.BUILD_NUMBER} - SUCCESS",
-                body: "Build succeeded"
-            )
-        }
-        failure {
-            emailext (
-                to: config.FAILURE_RECIPIENTS,
-                subject: "Build ${env.JOB_NAME} - ${env.BUILD_NUMBER} - FAILURE",
-                body: "Build failed"
-            )
-        }
-    }
+ 
   
 }
