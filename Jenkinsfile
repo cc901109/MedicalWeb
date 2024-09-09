@@ -7,9 +7,11 @@ pipeline{
     stage('Git'){
       steps{
         
-        emailext body: 'aaa', subject: 'aaa', to: 'tttt1109@yahoo.com.tw'
         
-        sh'''pwd
+        
+        sh'''
+        emailext body: 'aaa', subject: 'aaa', to: 'tttt1109@yahoo.com.tw'
+        pwd
         ls -al
         id
         echo git'''
