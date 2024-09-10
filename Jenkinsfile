@@ -6,7 +6,7 @@ pipeline{
     stage('Git'){
       steps{
         
-        sh''pwd
+        sh'''pwd
         ls -al
         id
         echo git'''
