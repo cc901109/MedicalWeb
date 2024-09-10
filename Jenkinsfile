@@ -29,22 +29,17 @@ pipeline{
     }
   }
 
-  post {
-        success {
-            emailext (
-                subject: "Pipeline Success",
-                body: "The pipeline completed successfully.",
-                to: "tzuyu1109@gmail.com"
-            )
+  stage('Notify') {
+            steps {
+                emailext(
+                    subject: '构建完成 - ${JOB_NAME} - ${BUILD_NUMBER}',
+                    body: '$DEFAULT_CONTENT',
+                    recipientProviders: [developers()],
+                    // 使用模板
+                    templateName: 'test001'
+                )
+            }
         }
-        failure {
-            emailext (
-                subject: "Pipeline Failure",
-                body: "The pipeline failed.",
-                to: "tzuyu1109@gmail.com"
-            )
-        }
-    }
 
  
   
