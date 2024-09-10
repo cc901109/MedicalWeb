@@ -6,7 +6,7 @@ pipeline{
     
     stage('Git'){
       steps{
-        mail bcc: '', body: 'aaaaa', cc: '', from: '', replyTo: '', subject: 'aa', to: 'tzuyu1109@gmail.com'
+        
         sh'''pwd
         ls -al
         id
