@@ -30,16 +30,13 @@ pipeline{
   }
 
   stage('Notify') {
-            steps {
-                emailext(
-                    subject: '构建完成 - ${JOB_NAME} - ${BUILD_NUMBER}',
-                    body: '$DEFAULT_CONTENT',
-                    recipientProviders: [developers()],
-                    // 使用模板
-                    templateName: 'test001'
-                )
-            }
-        }
+    steps {
+      emailext(subject: 'Completed ${JOB_NAME} - ${BUILD_NUMBER}',
+               body: '$DEFAULT_CONTENT',
+               templateName: 'test001'
+              )
+    }
+  }
 
  
   
