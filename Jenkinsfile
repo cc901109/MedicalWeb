@@ -27,16 +27,21 @@ pipeline{
         cleanWs(deleteDirs: true)
       }
     }
+
+    stage('Notify') {
+      steps {
+        emailext(subject: 'Completed ${JOB_NAME} - ${BUILD_NUMBER}',
+                 body: '$DEFAULT_CONTENT',
+                 templateName: 'test001'
+                )
+      }
+    }
+
+
+    
   }
 
-  stage('Notify') {
-    steps {
-      emailext(subject: 'Completed ${JOB_NAME} - ${BUILD_NUMBER}',
-               body: '$DEFAULT_CONTENT',
-               templateName: 'test001'
-              )
-    }
-  }
+  
 
  
   
