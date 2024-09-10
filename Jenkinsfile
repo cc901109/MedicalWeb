@@ -31,14 +31,14 @@ pipeline{
   post {
         success {
             emailext(
-                to: "${env.recipient_group_1}",
+                to: "${env.recipient_group1}",
                 subject: 'Jenkins Build Successful',
                 body: 'The Jenkins build was successful.'
             )
         }
         failure {
             emailext(
-                to: "${env.GROUP2_RECIPIENTS}",
+                to: "${env.recipient_group2}",
                 subject: 'Jenkins Build Failed',
                 body: 'The Jenkins build failed. Please check the logs for more details.'
             )
